@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>ADMIN DASHBOARD</title>
+    <link rel="stylesheet" href="style2.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" />
+
+</head>
+<body>
+    <div class="grid-container">
+        <header class="header">
+            <div class="menu-icon" onclick="openSidebar()">
+                <span class="material-symbols-outlined">menu</span> 
+            </div>
+            <div class="header-left">
+                <span class="material-symbols-outlined">search</span>           
+            </div>
+            <div class="header-right">
+                <span class="material-symbols-outlined">notifications</span> 
+                <span class="material-symbols-outlined">email</span> 
+                <span class="material-symbols-outlined">account_circle</span> 
+            </div>
+        </header>
+
+        <aside id="sidebar">
+            <div class="sidebar-title">
+                <div class="sidebar-brand">
+                    <span class="material-symbols-outlined">shopping_cart</span>STORE
+                </div>
+                <span class="material-symbols-outlined" onclick="closeSidebar()">close</span>
+            </div>
+
+            <ul class="sidebar-list">
+                <li class="sidebar-list-item">
+                    <span class="material-symbols-outlined">dashboard</span> Dashboard
+                </li>
+                <li class="sidebar-list-item">
+                    <span class="material-symbols-outlined">inventory_2</span> Products
+                </li>
+                <li class="sidebar-list-item">
+                    <span class="material-symbols-outlined">category</span> Categories
+                </li>
+                <li class="sidebar-list-item">
+                    <span class="material-symbols-outlined">groups</span> Customers
+                </li>
+                <li class="sidebar-list-item">
+                    <span class="material-symbols-outlined">checklist_rtl</span> Inventry
+                </li>
+                <li class="sidebar-list-item">
+                    <span class="material-symbols-outlined">poll</span> Reports
+                </li>
+                <li class="sidebar-list-item">
+                    <span class="material-symbols-outlined">settings</span> Settings
+                </li>
+            </ul>
+        </aside>
+        <main class="main-container">
+            <div class="main-title">
+                <h2>MUKUND'S STORE DASHBOARD</h2>
+            </div>
+            <div class="main-cards">
+
+                <div class="card">
+                    <div class="card-inner">
+                        <h3>PRODUCTS</h3>
+                        <span class="material-symbols-outlined">inventory_2</span> 
+                    </div>
+                    <h1>247</h1>
+                </div>
+
+                <div class="card">
+                    <div class="card-inner">
+                        <h3>CATEGORY</h3>
+                        <span class="material-symbols-outlined">category</span> 
+                    </div>
+                    <h1>17</h1>
+                </div>
+
+                <div class="card">
+                    <div class="card-inner">
+                        <h3>CUSTOMERS</h3>
+                        <span class="material-symbols-outlined">groups</span> 
+                    </div>
+                    <h1>15,000</h1>
+                </div>
+
+                <div class="card">
+                    <div class="card-inner">
+                         <h3>NOTIFICATIONS</h3>
+                        <span class="material-symbols-outlined">notifications_active</span> 
+                    </div>
+                    <h1>56</h1>
+                </div>
+            </div>
+
+            <div class="charts">
+                <div class="charts-card">
+                    <h2 class="chart-title">top 5 products</h2>
+                    <div id="bar-chart"></div>
+                </div>
+            </div>
+
+            <div class="charts">
+                <div class="charts-card">
+                    <h2 class="chart-title">Purchase and Sales Orders </h2>
+                    <div id="area-chart"></div>
+                </div>
+            </div>            
+
+        </main>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/apexcharts/3.54.1/apexcharts.min.js" ></script>
+    <script src="script2.js"></script>
+</body>
+</html>
